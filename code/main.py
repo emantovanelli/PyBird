@@ -18,8 +18,10 @@ ground_group = pygame.sprite.Group()
 ground = Ground(SCREEN_WIDTH, 100)
 ground_group.add(ground)
 
+clock = pygame.time.Clock()
 
 while True:
+    clock.tick(30)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
