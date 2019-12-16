@@ -23,6 +23,8 @@ class Bird(pygame.sprite.Sprite):
         self.image = pygame.image.load(
             '../assets/sprites/bluebird-midflap.png').convert_alpha()
 
+        self.mask = pygame.mask.from_surface(self.image)
+
         self.rect = self.image.get_rect()
         self.rect[0] = SCREEN_WIDTH / 2
         self.rect[1] = SCREEN_HEIGHT / 2
